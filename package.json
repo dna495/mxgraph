@@ -1,34 +1,29 @@
 {
   "name": "mxgraph",
-  "description": "mxGraph is a fully client side JavaScript diagramming library that uses SVG and HTML for rendering.",
   "version": "3.8.0",
-  "homepage": "https://github.com/jgraph/mxgraph",
-  "author": {
-    "name": "JGraph Ltd",
-    "email": "support@jgraph.com"
+  "description": "mxGraph is a fully client side JavaScript diagramming library that uses SVG and HTML for rendering.",
+  "main": "./javascript/dist/build.js",
+  "directories": {
+    "doc": "docs"
   },
-  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "grunt build --base \"$(npm prefix)\" --gruntfile ./etc/build/Gruntfile.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jgraph/mxgraph.git"
   },
+  "author": {
+    "name": "JGraph Ltd",
+    "email": "support.jgraph.com"
+  },
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jgraph/mxgraph/issues"
   },
-  "main": "./javascript/dist/build.js",
-  "scripts": {
-    "postinstall": "grunt build"
-  },
+  "homepage": "https://github.com/jgraph/mxgraph#readme",
   "dependencies": {
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-webpack": "^3.0.2",
-    "load-grunt-parent-tasks": "^0.1.1",
-    "load-grunt-tasks": "^3.5.2",
-    "webpack": "^3.10.0"
-  },
-  "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
